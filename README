@@ -3,3 +3,6 @@ A simple blogging system written in meteorjs.
 rm touche.*
 mkdir client server public lib collection
 meteor add bootstrap
+meteor add mrt:accounts-ui-bootstrap-dropdown
+meteor add accounts-password
+meteor remove insecure
