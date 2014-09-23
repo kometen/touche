@@ -13,14 +13,13 @@ Posts.deny({
 });
 
 Meteor.methods({
-    postPost: function (postAttributes) {
+    savePost: function (postAttributes) {
         var user = Meteor.user();
 
         // ensure user is logged in
         if (!user) {
             throw new Meteor.Error(401, 'You need to log in to add new posts');
         }
-
         if (!postAttributes.url) {
             throw new Meteor.Error(422, 'Please fill in the URL');
         }
@@ -33,8 +32,8 @@ Meteor.methods({
 
         // whitelisted keys
         var post = _.extend(_.pick(postAttributes, 'url', 'title', 'message'), {
-            ownerId: post._id,
-            owner: post.username,
+            ownerId: user._id,
+            owner: user.username,
             submitted: new Date().getTime()
         });
 
