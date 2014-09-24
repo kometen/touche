@@ -10,9 +10,14 @@ Template.postNew.events( {
 
         Meteor.call('savePost', post, function (error, id) {
             if (error) {
-                return alert(error.reason);
+                throwError(error.reason);
+
+                if (error.error === 302) {
+                    Router.go('postPage', {_id: error.details});
+                }
+            } else {
+                Router.go('postPage', {_id: id});
             }
-            Router.go('postPage', {_id: id});
         });
     }
 });
