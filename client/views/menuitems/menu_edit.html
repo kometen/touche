@@ -1,0 +1,24 @@
+<template name="menuEdit">
+    <form class="main">
+        <div class="control-group">
+            <label class="control-label" for="title">title</label>
+            <div class="controls">
+                <input name="url" type="text" value="{{title}}" placeholder="Title" />
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="description">Description</label>
+            <div class="controls">
+                <textarea name="description" type="text" value="{{description}}"></textarea>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <input type="submit" value="Save" class="btn btn-primary submit" />
+                <a class="btn btn-danger delete" href="#">Delete title</a>
+            </div>
+        </div>
+    </form>
+</template>

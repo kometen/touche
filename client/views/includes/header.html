@@ -9,10 +9,13 @@
             <a class="brand" href="{{pathFor 'postsList'}}">Touché</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    {{#if currentUser}}<li><a href="{{pathFor 'postNew'}}">New</a></li>{{/if}}
+                    <li><a href="{{pathFor 'menusList'}}">Testmenuitem</a></li>
                 </ul>
                 <ul class="nav pull-right">
                     <li>{{> loginButtons}}</li>
+                </ul>
+                <ul class="nav pull-right">
+                    {{#if currentUser}}<li><a href="{{pathFor 'menuNew'}}">Add menu</a></li>{{/if}}
                 </ul>
             </div>
         </div>

@@ -1,0 +1,12 @@
+<template name="menuItem">
+	<div class="post">
+		<div class="post-content">
+			<h3>{{title}}<span>{{description}}</span></h3>
+            <p>
+                submitted by {{author}}
+                {{#if ownMenu}}<a href="{{pathFor 'menuEdit'}}">Edit</a>{{/if}}
+            </p>
+		</div>
+        <a href="{{pathFor 'menuPage'}}" class="discuss btn">Discuss</a>
+	</div>
+</template>
