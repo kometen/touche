@@ -1,12 +1,13 @@
 <template name="menuItem">
 	<div class="post">
 		<div class="post-content">
-			<h3>{{title}}<span>{{description}}</span></h3>
+			<h3>{{title}}&nbsp;<span>{{description}}</span></h3>
             <p>
                 submitted by {{author}}
                 {{#if ownMenu}}<a href="{{pathFor 'menuEdit'}}">Edit</a>{{/if}}
             </p>
 		</div>
-        <a href="{{pathFor 'menuPage'}}" class="discuss btn">Discuss</a>
+        <input type="button" class="discuss btn details" value="Details1">
+        <a href="{{pathFor 'menuPage'}}" class="discuss btn">Details</a>
 	</div>
 </template>

@@ -8,7 +8,7 @@ Menus.allow({
 Menus.deny({
     update: function (userId, doc, fields) {
         // Only edit specified fields
-        return (_.without(fields, 'title', 'message').length > 0);
+        return (_.without(fields, 'title', 'description').length > 0);
     }
 });
 

@@ -8,3 +8,12 @@ Template.menuItem.helpers({
 		return a.hostname;
 	}
 });
+
+Template.menuItem.events({
+    'click .details': function (e) {
+        e.preventDefault();
+
+        Session.set('edit_menu', 'changed');
+        Session.set('menu_id', this._id);
+    }
+});

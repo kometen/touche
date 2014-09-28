@@ -1,7 +1,12 @@
 <template name="menusList">
-	<div class="posts">
-		{{#each menus}}
-			{{> menuItem}}
-		{{/each}}
-	</div>
+    <div class="row-fluid">
+        <div class="posts span8">
+            {{#each menus}}
+                {{> menuItem}}
+            {{/each}}
+        </div>
+        <div class="span4">
+            {{> menuDetails}}
+        </div>
+    </div>
 </template>

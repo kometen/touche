@@ -1,0 +1,19 @@
+<template name="menuDetails">
+    <div class="post">
+        <div class="post-content">
+            {{#with menu}}
+                Title: {{title}}<br />
+                Description: {{description}}<br />
+                {{#if ownMenu}}<br /><input type="button" class="discuss btn edit" style="float: left" value="Edit">{{/if}}
+            {{else}}
+                Title:<br />
+                Description:<br />
+            {{/with}}
+            {{#with edit_menu}}
+                <br />
+                <br />
+                {{> menuEdit}}
+            {{/with}}
+        </div>
+    </div>
+</template>

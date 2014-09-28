@@ -13,7 +13,7 @@ Template.menuEdit.events({
             if (error) {
                 alert(error.reason);
             } else {
-                Router.go('menusList');
+                Session.set('edit_menu', 'changed');
             }
         });
     },
@@ -26,5 +26,10 @@ Template.menuEdit.events({
             Menus.remove(currentMenuId);
             Router.go('menusList');
         }
+    },
+
+    'click .cancel': function (e) {
+        e.preventDefault();
+        Session.set('edit_menu', 'changed');
     }
 });
